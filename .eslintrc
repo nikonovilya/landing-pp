@@ -1,0 +1,16 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": ["airbnb/base", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "semi": "off", //убрать ошибку с точки с запятой
+    "no-plusplus": "off", //убрать ошибку с оператора ++, например i++
+    "eol-last": "warn", //в конце файла должна быть пустая строка
+    "prefer-destructuring": "warn", //отмена ошибки деструктуризации
+    "object-curly-spacing": [1, "never"] //отмена ошибки пробелов в {}
+  }
+}

@@ -1,0 +1,99 @@
+.section
+  padding: 50px 0
+
+  &__title
+    font-size: 48px
+    font-weight: $bold
+    margin-bottom: 16px
+    line-height: 1.2
+
+  &__title.section__title--semibold
+    font-weight: $semibold
+
+  &__description
+    font-size: 32px
+    line-height: 1.4
+    color: $color-black-light
+    margin-bottom: 16px
+
+  &__image
+    position: relative
+    padding: 0 6px
+
+  &__figure
+    display: block
+    width: 100%
+    margin: 0
+
+  &__img
+    display: block
+    width: 100%
+
+  &__figcaption
+    display: block
+    color: $color-figcaption
+    text-align: center
+
+  &__btn
+    display: block
+    font-size: 32px
+    font-weight: $semibold
+    text-align: center  
+    color: $color_white
+    background-color: $color-primary
+    border-radius: $border-radius-btn
+    padding: 16px 50px
+    transition: background-color 0.2s ease
+  &__btn:hover
+    background-color: $color-primary-hover
+    
+  &__btn.section__btn--position
+    position: absolute
+    font-size: 2vw
+    top: 66%
+    right: 4.5%
+    min-width: 43%
+    padding: 16px 0
+
+  &__row
+    display: flex
+    justify-content: space-between
+  &__row:not(:last-child)
+    margin-bottom: 20px
+  &__row.section__row--margin-bottom
+    margin-bottom: 50px
+  &__row.section__row--block
+    display: block
+
+  &__col
+    max-width: 48%
+  &__col.section__col--width
+    max-width: 32%
+
+  &__sub-title
+    font-size: 24px
+    font-weight: $semibold
+    letter-spacing: 0.04em
+    text-transform: uppercase
+    color: $color-grey
+    margin-bottom: 16px
+  &__sub-title.section__sub-title--color
+    color: $color-primary
+  &__sub-title.section__sub-title--margin-bottom
+    margin-bottom: 6px
+
+  &__col-text
+    color: $color-black-light
+  &__col-text.section__col-text--font-size
+    font-size: 32px
+    line-height: 1.4
+  &__col-text.section__col-text--width
+    max-width: 80%
+  &__col-p
+    display: block
+    margin-bottom: 16px
+
+.section.section--bg
+  background-color: $color-bg
+.section.section--padding-top
+    padding-top: 120px

@@ -1,0 +1,24 @@
+.nav
+  &__list
+    display: flex
+    justify-content: space-between
+    align-items: center
+    
+  &__item:not(:last-child)
+    margin-right:  80px
+
+  &__link
+    font-size: 17px
+  &__link:hover
+    text-decoration: underline
+
+  &__link.nav__link--login
+    padding: 12px 40px
+    font-size: 17px
+    color: $color-white
+    background-color: $color-primary
+    border-radius: 3px  
+    transition: background-color 0.2s ease
+  &__link.nav__link--login:hover
+    text-decoration: none
+    background-color: $color-primary-hover

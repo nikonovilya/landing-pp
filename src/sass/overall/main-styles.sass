@@ -1,0 +1,51 @@
+html
+  box-sizing: border-box
+  line-height: 1.15
+
+body
+  position: relative
+  min-width: 320px
+  margin: 0
+  padding: 0
+  font-family: "WorkSans", "Arial", sans-serif
+  font-size: $fz-default
+  font-weight: $regular
+  font-style: normal
+  line-height: $line-height
+  color: $color-font
+  background-color: $color-white
+
+*,
+::after,
+::before
+  box-sizing: inherit
+
+button,
+select
+  cursor: pointer
+
+h1,h2,h3,h4,h5,h6,p
+  margin: 0
+  padding: 0
+
+ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+a
+  text-decoration: none
+  color: inherit
+
+.visually-hidden
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  border: 0
+  padding: 0
+  white-space: nowrap
+  word-wrap: normal
+  clip-path: inset(100%)
+  clip: rect(0 0 0 0)
+  overflow: hidden
