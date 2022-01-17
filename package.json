@@ -4,6 +4,7 @@
   "description": "сборка gulp",
   "main": "index.html",
   "scripts": {
+    "build": "gulp",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix"
   },
