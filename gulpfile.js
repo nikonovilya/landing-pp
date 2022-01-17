@@ -16,14 +16,12 @@ const path = {
     html: './src/**/*.html',
     css: './src/sass/**/*.sass',
     img: './src/img/**/*.{jpg,png,svg,ico,webp,gif}',
-    fonts: './src/fonts/**/*.{woff2,woff}',
     js: './src/js/**/*.js',
   },
   build: {
     html: './build/',
     css: './build/css',
     img: './build/img',
-    fonts: './build/fonts',
     js: './build/js',
     clean: ['./build/**/*'],
   },
@@ -66,10 +64,6 @@ function styles() {
     .pipe(browsersync.stream());
 }
 
-function fonts() {
-  return src(path.src.fonts).pipe(dest(path.build.fonts));
-}
-
 function images() {
   return src(path.src.img).pipe(dest(path.build.img)).pipe(browsersync.stream());
 }
@@ -97,13 +91,12 @@ function watchFiles() {
   gulp.watch([path.watch.img], images);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, fonts, images, styles, scripts));
+const build = gulp.series(clean, gulp.parallel(html, images, styles, scripts));
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.html = html;
 exports.styles = styles;
 exports.scripts = scripts;
-exports.fonts = fonts;
 exports.images = images;
 exports.clean = clean;
 exports.watch = watch;
