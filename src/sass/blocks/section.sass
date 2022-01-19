@@ -6,6 +6,8 @@
     font-weight: $bold
     margin-bottom: 16px
     line-height: 1.1
+  &__title.section__title--max-width
+    max-width: 80%
 
   &__title.section__title--semibold
     font-weight: $semibold
@@ -24,6 +26,9 @@
     display: block
     width: 100%
     margin: 0
+  &__figure.section__figure--big-paddigs
+    padding-left: 20px
+    padding-right: 20px
 
   &__img
     display: block
@@ -33,12 +38,14 @@
     display: block
     color: $color-figcaption
     text-align: center
+  &__figcaption.section__figcaption--margin-top
+    margin-top: 25px
 
   &__btn
     display: block
     font-size: 32px
     font-weight: $semibold
-    text-align: center  
+    text-align: center
     color: $color_white
     background-color: $color-primary
     border-radius: $border-radius-btn
@@ -46,7 +53,7 @@
     transition: background-color 0.2s ease
   &__btn:hover
     background-color: $color-primary-hover
-    
+
   &__btn.section__btn--position
     position: absolute
     font-size: 2vw
@@ -77,8 +84,10 @@
     text-transform: uppercase
     color: $color-grey
     margin-bottom: 16px
-  &__sub-title.section__sub-title--color
-    color: $color-primary
+  &__sub-title.section__sub-title--color-zenno
+    color: $color-subtitle-zenno
+  &__sub-title.section__sub-title--color-rs
+    color: $color-subtitle-rs
   &__sub-title.section__sub-title--margin-bottom
     margin-bottom: 6px
 
@@ -87,21 +96,46 @@
   &__col-text.section__col-text--font-size
     font-size: 32px
     line-height: 1.4
-  &__col-text.section__col-text--width
+  &__col-text.section__col-text--max-width
     max-width: 80%
+  &__col-text.section__col-text--margin-bottom
+    margin-bottom: 30px
   &__col-p
     display: block
     margin-bottom: 16px
 
-.section.section--bg
-  background-color: $color-bg
+  &__item
+    position: relative
+    padding-left: 20px
+    font-size: 32px
+    line-height: 1.2
+  &__item::before
+    content: ''
+    position: absolute
+    top: 18px
+    left: 0
+    width: 5px
+    height: 6px
+    background-color: $color-black
+    border-radius: 50%
+  &__item:not(:last-child)
+    margin-bottom: 20px
+
+.section.section--bg-zenno
+  background-color: $color-bg-zenno
+.section.section--bg-rs
+  background-color: $color-bg-rs
 .section.section--padding-top
-    padding-top: 120px
+  padding-top: 120px
 
 @media screen and (max-width: 1180px)
   .section
-    &__col-text.section__col-text--width
+    &__title.section__title--max-width
       max-width: 100%
+
+    &__col-text.section__col-text--max-width
+      max-width: 100%
+
     &__btn.section__btn--position
       font-size: 2.6vw
 
@@ -109,7 +143,7 @@
   .section
     &__btn.section__btn--position
       top: 58%
-      
+
 @media screen and (max-width: 767px)
   .section
     &__row
@@ -118,7 +152,6 @@
     &__col,
     &__col.section__col--width
       max-width: 100%
-
     &__col:not(:last-child)
       margin-bottom: 24px
 
@@ -138,3 +171,15 @@
 
     &__figcaption
       margin-top: 8px
+
+    &__item
+      font-size: 28px
+    &__item::before
+      top: 14px
+
+    &__figure.section__figure--big-paddigs
+      padding-left: 0
+      padding-right: 0
+
+    &__figcaption.section__figcaption--margin-top
+      margin-top: 16px
