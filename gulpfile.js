@@ -72,7 +72,9 @@ function scripts() {
   return src(path.src.js)
     .pipe(rollup({
       input: './src/js/script.js',
-      format: 'cjs',
+      output: {
+        format: 'cjs',
+      }
     }))
     .pipe(gulpif(argv.prod, babel({ presets:['@babel/env'] })))
     .pipe(gulpif(argv.prod, uglify()))
