@@ -17,6 +17,8 @@
     line-height: 1.4
     color: $color-black-light
     margin-bottom: 16px
+  &__description.section__description--color
+    color: $color-black
 
   &__image
     position: relative
@@ -57,7 +59,7 @@
   &__btn.section__btn--position
     position: absolute
     font-size: 2vw
-    top: 66%
+    top: 68%
     right: 4.5%
     min-width: 43%
     padding: 16px 0
@@ -90,6 +92,14 @@
     color: $color-subtitle-rs
   &__sub-title.section__sub-title--margin-bottom
     margin-bottom: 6px
+  &__sub-title.section__sub-title--empty
+    color: transparent
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
 
   &__col-text
     color: $color-black-light
@@ -142,7 +152,7 @@
 @media screen and (max-width: 955px)
   .section
     &__btn.section__btn--position
-      top: 58%
+      top: 66%
 
 @media screen and (max-width: 767px)
   .section
@@ -155,6 +165,9 @@
     &__col:not(:last-child)
       margin-bottom: 24px
 
+    &__sub-title.section__sub-title--empty
+      display: none
+      
     &__btn.section__btn--position
       display: none
 
